@@ -1,0 +1,11 @@
+<%# 判斷是否有flash %>
+<% if flash.any? %>
+  <%# 對每個flash進行處理 %>
+  <%# key表顯示的類型(class)；value表訊息 %>
+  <% user_facing_flashes.each do |key, value| %>
+    <div class="alert alert-dissmissable alert-<%= flash_class(key) %>">
+        <button class="close" data-dismiss="alert">×</button>
+        <%= value %> <%# 訊息 %>
+    </div>
+  <% end %>
+<% end %>
