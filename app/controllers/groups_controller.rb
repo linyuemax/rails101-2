@@ -24,7 +24,14 @@ class GroupsController < ApplicationController
   def update
     @group=Group.find(params[:id]) #要修改的那筆
     @group.update(group_params) #以畫面的值儲存
-    redirect_to groups_path, norice: "Update Success"
+    redirect_to groups_path, notice: "Update success"
+  end
+
+  def destroy
+    @group=Group.find(params[:id])
+    @group.destroy
+    flash[:alert]="Group deleted"
+    redirect_to groups_path
   end
 
   private
