@@ -15,4 +15,5 @@
 //= require turbolinks
 // 掛上後全部範圍都可用，如所有畫面上部件皆可使用flash
 //= require bootstrap/alert
+//= require bootstrap/dropdown
 //= require_tree .
